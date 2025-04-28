@@ -2,23 +2,21 @@
     transition: background-color 0.3s ease;
   }
   
-  /* Add hover effect to the task items */
+
   .list-group-item:hover {
     background-color: rgba(0, 0, 0, 0.02);
   }
   
-  /* Custom styling for the task title when completed */
+
   .text-decoration-line-through {
     color: #6c757d;
   }
   
-  /* Custom Badge styling */
   .badge {
     font-weight: normal;
     font-size: 0.75rem;
   }
   
-  /* Add some animation to the delete button */
   .btn-outline-danger {
     transition: all 0.2s ease;
   }
@@ -27,3 +25,13 @@
     transform: scale(1.1);
   }
   
+  .list-group-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .list-group-item:hover {
+    background-color: rgba(144, 238, 144, 0.6);
+    color: #000;
+  }

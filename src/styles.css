@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background: url('https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+  
+  .container-lg, .card, .modal-content, .navbar {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 10px;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+  }
+  .modal-content {
+    background-color: rgba(255, 255, 255, 0.95); 
+    color: #212529; 
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3); 
+  }

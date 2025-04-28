@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-client',
   imports: [CommonModule, FormsModule],
   templateUrl: './client.component.html',
-  styleUrls: ['./client.component.css'] 
+  styleUrls: ['./client.component.css']
 })
 export class ClientComponent {
 
@@ -58,21 +58,17 @@ export class ClientComponent {
   };
 
   addClient() {
-    if (this.client.name !== '') {
-
+    if (this.client.name && this.client.email) {
       const newClient = { ...this.client, id: this.clientList.length + 1 };
       this.clientList.push(newClient);
 
-
-      this.client = {
-        id: 0,
-        name: '',
-        email: '',
-        phone: '',
-        notes: '',
-      };
+      // Reset form
+      this.client = { id: 0, name: '', email: '', phone: '', notes: '' };
+    } else {
+      alert('Please fill out all required fields.');
     }
   }
+
 
   deleteClient(currentClient: Client) {
     this.clientList = this.clientList.filter(c => c.id !== currentClient.id);
